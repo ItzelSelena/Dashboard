@@ -1,0 +1,29 @@
+.ChartsDash2 {
+  padding: 29px;
+  background-color: rgb(18, 26, 29);
+  display: flex; /* Hace que los contenedores hijos se alineen en una fila */
+  flex-wrap: wrap; /* Permite que los contenedores hijos se envuelvan si no hay suficiente espacio */
+}
+
+.dynamic-chart-container,
+.circle-custom-angle-container,
+.polar-area-chart-container {
+  margin-right: 20px; /* Espacio entre los contenedores hijos */
+}
+
+.dynamic-chart-container {
+  background-color: green;
+}
+
+.circle-custom-angle-container {
+  background-color: pink;
+}
+
+.polar-area-chart-container {
+  background-color: yellow;
+}
+
+.Charts2 {
+  padding: 29px;
+  background-color: rgb(18, 26, 29);
+}

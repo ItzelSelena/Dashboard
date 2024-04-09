@@ -1,0 +1,9 @@
+/* DynamicChart.css */
+.chart-container3 {
+  display: inline-block; /* Ajusta el ancho al contenido */
+  margin-bottom: 20px; /* Espacio entre las gráficas */
+  background-color: #3b3737; /* Color blanco */
+  border-radius: 10px; /* Bordas redondeadas */
+  border: 1px solid #3b3737; /* Borde delgado de color gris */
+}
+

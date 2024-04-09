@@ -1,0 +1,109 @@
+/* Estilo de CompactCard */
+.CompactCard {
+  display: flex;
+  flex: 1;
+  height: 7rem !important;
+  border-radius: 0.7rem;
+  /* Color de fuente para las tarjetas sin expandir */
+  color: white;
+  padding: 1rem;
+  position: relative;
+  cursor: pointer;
+  transition: boxShadow 0.3s ease; /* Transición suave para la sombra */
+}
+.CompactCard:hover {
+  box-shadow: 0 0 10px rgba(153, 168, 184, 0.3); /* Efecto de sombra al pasar el cursor */
+}
+
+/* Estilo de la barra radial */
+.radialBar {
+  flex: 1 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+.CircularProgressbar {
+  width: 4rem !important;
+  overflow: visible;
+}
+.CircularProgressbar-path {
+  stroke: white !important;
+  stroke-width: 12px !important;
+  filter: drop-shadow(2px 4px 6px white); /* Sombra para el   camino */
+}
+.CircularProgressbar-trail {
+  display: none; /* Ocultar la trayectoria */
+}
+.CircularProgressbar-text {
+  fill: white !important; /* Color de fuente para el texto de progreso */
+}
+
+.radialBar > span {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+/* Estilo de SideDetail */
+.detail {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.detail > span:nth-child(2) {
+  font-size: 22px;
+  font-weight: bold;
+}
+.detail > span:nth-child(3) {
+  font-size: 12px;
+}
+
+/* Estilo de ExpandedCard */
+.ExpandedCard {
+  position: absolute;
+  width: 60%;
+  height: 70vh;
+  z-index: 9;
+  left: 13rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem;
+}
+.ExpandedCard > span:nth-of-type(1) {
+  color: rgb(250, 250, 250);
+  font-size: 26px;
+  font-weight: bold;
+  text-shadow: 0px 0px 15px white; /* Sombra para el título */
+}
+.ExpandedCard > span:nth-of-type(2) {
+  color: rgb(236, 236, 236);
+  font-size: 15px;
+}
+
+.chartContainer {
+  width: 70%;
+}
+
+/* Consultas de medios para diseño responsivo */
+@media screen and (max-width: 1200px) {
+  .ExpandedCard {
+    top: 2rem;
+    height: 45vh;
+    left: 6rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .ExpandedCard {
+    top: 8rem;
+    height: 50%;
+    left: 25px;
+    width: 80%;
+  }
+}

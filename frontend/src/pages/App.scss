@@ -1,0 +1,72 @@
+:root {
+  --yellow: linear-gradient(180deg, #F8D49A -146.42%, #FAD79D -46.42%);
+  --orange: #181717;
+  --black: #063feb;
+  ----gray: #0642f7;
+  --purple: linear-gradient(180deg, #e9f0f5 0%, #b155b1e7 100%);
+  --pink: #db0011;
+  --glass: #f4f4f436; /* Color morado transparente */
+  --boxShadow: 0 0 10px rgba(153, 168, 184, 0.3);
+  --smboxShadow: -79px 51px 60px rgba(19, 18, 18, 0.08);
+  --activeItem: #ee87b254;
+}
+
+.App {
+  padding: 0.5rem 0.1rem;
+  color: rgb(10, 10, 10);
+  background: linear-gradient(45deg, rgb(209, 4, 4)40%, rgb(247, 247, 247) 60%); 
+  height: 100vh;
+  width: flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+}
+
+.AppGlass {
+  display: grid;
+  height: 100%;
+  width: 97%;
+  backdrop-filter: blur(6px);
+  background: var(--glass); /* Utiliza el color morado transparente */
+  border-radius: 0.3rem;
+  gap: 10px;
+  grid-template-columns: 11rem auto 0.1rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+/* Estilo delgado y rojo para el scroll */
+::-webkit-scrollbar {
+  width: 5px; /* Ancho del scroll */
+  height: 5px; /* Altura del scroll */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 0, 0, 0.041); /* Color del scroll */
+  border-radius: 7px; /* Borde redondeado */
+}
+
+/* Estilos para los elementos hijos */
+.AppGlass > * {
+  max-width: 100%; /* Evita que los elementos se desborden horizontalmente */
+  max-height: 100%; /* Evita que los elementos se desborden verticalmente */
+  overflow-y: auto /* Oculta cualquier contenido que se desborde */
+}
+
+
+@media screen and (max-width: 1200px) {
+  .AppGlass{
+    grid-template-columns: 16% 80% auto;
+    overflow-y: scroll;
+  } 
+}
+
+@media screen and (max-width: 1000px) {
+  .AppGlass{
+    grid-template-columns: 1fr;
+    overflow-y: scroll;
+  } 
+}
+
+
+

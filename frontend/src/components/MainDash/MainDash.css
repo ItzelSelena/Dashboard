@@ -1,0 +1,14 @@
+.MainDash {
+    margin-top: 0;
+    padding-top: 0rem;
+    background-color: #ffcccc00; /* Color rosado claro en hexadecimal */
+    /* O puedes usar background-color: lightpink; para el nombre del color */
+    flex-grow: 1; /* Hacer que el tamaño sea flexible */
+}
+
+@media screen and (max-width: 768px) {
+    .MainDash {
+        width: auto; /* Ancho flexible que se ajusta automáticamente */
+    }
+}
+

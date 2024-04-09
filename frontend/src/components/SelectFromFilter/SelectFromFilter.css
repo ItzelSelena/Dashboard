@@ -1,0 +1,11 @@
+.tooltip {
+  background-color: #f02b2b;
+  color: rgba(184, 28, 28, 0.986);
+  max-width: 220px;
+  font-size: 12px;
+  border: 1px solid #21306d;
+}
+
+.arrow {
+  color: rgb(231, 44, 44);
+}

@@ -1,0 +1,7 @@
+.chart-container4 {
+  position: relative; /* Cambio a posición relativa para posicionar el gráfico */
+  margin-top: 20px; /* Espacio superior */
+  margin-right: 20px; /* Espacio derecho */
+  background-color: rgb(160, 65, 160); /* Color de fondo morado */
+  padding: 1rem; /* Aumenta el tamaño del contenedor en 1rem */
+}

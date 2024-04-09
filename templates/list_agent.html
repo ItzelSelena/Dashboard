@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Título de la página</title>
+</head>
+<body>
+    <!-- Contenido de la página -->
+    <h1>Lista de agentes en la BD :3 !!!! </h1> 
+    <!-- Verifica que object_list no sea vacío -->
+    <!-- object_list esun objeto de django si, en los templates tambien podemos hacer control de sentencias de flujo
+    solo para los templates de django para nosotros poder escribir if else for, siip
+la sintaxis de los corchetes con porcentajes :) es para poder ejecutar las sentencias que queramos :3 iterar? oki si mmmta pues que niña
+  -->
+    {% if object_list %}
+        <table border="1">
+            <thead>
+                <tr> 
+                    <th>No. Registro</th>
+                    <th>Nombre</th>
+                    <th>Area</th> 
+                    <th>Sitio</th>  
+                    <!-- Agrega más encabezados según las propiedades de tu modelo -->
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Usa un bucle para recorrer los objetos en object_list -->
+                {% for agente in object_list %}
+                    <tr>
+                        <td>{{ agente.no_registro }}</td>
+                        <td>{{ agente.nombre }}</td> 
+                        <td>{{ agente.sitio_unidad.unidad.nombre}}</td>   <!--y aqui tengo que acceder la la de unidad, así funcionaria? :3  hahah salu2 -->
+                        <!-- Agrega más celdas según las propiedades de tu modelo -->
+                        <td>{{agente.sitio_unidad.sitio.nombre}}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No hay agentes en la lista.</p>
+    {% endif %} 
+</body>
+</html>
